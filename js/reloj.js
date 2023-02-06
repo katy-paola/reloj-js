@@ -1,0 +1,124 @@
+
+let currentTime = new Date();
+
+//creamos una clase llamada hand que tenga 3 propiedades
+
+class hand {
+  constructor(element, initialAngle, rotationAngle) {
+    this.element = element;
+    this.initialAngle = initialAngle;
+    this.rotationAngle = rotationAngle;
+  }
+}
+
+let hourHand;
+let minuteHand;
+let secondHand;
+
+const days = [
+  "DOMINGO",
+  "LUNES",
+  "MARTES",
+  "MIÉRCOLES",
+  "JUEVES",
+  "VIERNES",
+  "SÁBADO",
+];
+
+const months = [
+  "ENE",
+  "FEB",
+  "MAR",
+  "ABR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AGO",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DIC",
+];
+const elementos = {
+  mode: document.getElementById("mode"),
+  cuerpoDom: document.querySelector("body"),
+  center: document.querySelector(".center"),
+  time: document.querySelector(".time"),
+  date: document.querySelector(".date"),
+}
+
+//creamos una función para cambiar el modo de la página
+
+let isClicked = false;
+
+function changeMode() {
+  elementos.mode.addEventListener("click", darkMode);
+}
+
+changeMode();
+
+function darkMode(){
+  if(!isClicked){
+    elementos.cuerpoDom.className = "active-dark";
+    elementos.mode.className = "mode active-dark hand-dark";
+    elementos.center.className = "center active-dark hand-dark";
+    hourHand.element.className = "hour active-dark hand-dark";
+    minuteHand.element.className = "minute active-dark hand-dark";
+    console.log(isClicked);
+    isClicked = true;
+  }else{
+    elementos.cuerpoDom.className = "";
+    elementos.mode.className = "mode";
+    elementos.center.className = "center";
+    hourHand.element.className = "hour";
+    minuteHand.element.className = "minute";
+    isClicked = false;
+  }
+}
+
+//creamos una función para inicializar las propiedades de cada objeto
+
+function initHands() {
+  element1 = document.querySelector(".hour");
+  angle1 = currentTime.getHours() * 30;
+  rotation1 = 1/120;
+
+  element2 = document.querySelector(".minute");
+  angle2 = currentTime.getMinutes() * 6;
+  rotation2 = 0.1;
+
+  element3 = document.querySelector(".second");
+  angle3 = currentTime.getSeconds() * 6;
+  rotation3 = 6;
+
+  hourHand = new hand(element1, angle1, rotation1);
+  minuteHand = new hand(element2, angle2, rotation2);
+  secondHand = new hand(element3, angle3, rotation3);
+}
+initHands();
+
+//creamos una función que se ejecute cada segundo para actualizar el reloj
+
+function updateClock() {
+  //creamos un setInterval que se ejecute cada segundo
+
+  setInterval(() => {
+
+    //actualizamos el valor de la propiedad element de cada objeto
+    hourHand.element.style.transform = `rotate(${hourHand.initialAngle - 90}deg)`;
+    minuteHand.element.style.transform = `rotate(${minuteHand.initialAngle - 90}deg)`;
+    secondHand.element.style.transform = `rotate(${secondHand.initialAngle - 90}deg)`;
+
+    //actualizamos el valor de la propiedad initialAngle de cada objeto
+    hourHand.initialAngle += hourHand.rotationAngle;
+    minuteHand.initialAngle += minuteHand.rotationAngle;
+    secondHand.initialAngle += secondHand.rotationAngle;
+  }, 1000);
+}
+
+updateClock();
+
+//usar innerHTML para mostrar la hora, día, mes y fecha
+
+elementos.time.innerHTML = `<p>${currentTime.toLocaleTimeString("en-US")}</p>`;
+elementos.date.innerHTML = `<p>${days[currentTime.getDay()]}, ${months[currentTime.getMonth()]} ${currentTime.getDate()}</p>`;
