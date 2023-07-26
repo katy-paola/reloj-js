@@ -47,6 +47,7 @@ const elementos = {
   center: document.querySelector(".center"),
   time: document.querySelector(".time"),
   date: document.querySelector(".date"),
+  author: document.querySelector(".author"),
   link: document.querySelector(".link"),
 }
 
@@ -59,7 +60,7 @@ function initHands() {
   rotation1 = 1/120;
 
   element2 = document.querySelector(".minute");
-  angle2 = currentTime.getMinutes() * 6 + 0.1;
+  angle2 = currentTime.getMinutes() * 6;
   rotation2 = 0.1;
 
   element3 = document.querySelector(".second");
@@ -148,6 +149,9 @@ function darkMode(){
     elementos.number.forEach(element => {
       element.className = "number active-dark";
     });
+    elementos.time.className = "time active-dark";
+    elementos.date.className = "date active-dark";
+    elementos.author.className = "author active-dark";
     elementos.link.className = "link active-dark";
     isClicked = true;
   }else{
@@ -161,6 +165,9 @@ function darkMode(){
     elementos.number.forEach(element => {
       element.className = "number";
     });
+    elementos.time.className = "time";
+    elementos.date.className = "date";
+    elementos.author.className = "author";
     elementos.link.className = "link";
     isClicked = false;
   }
