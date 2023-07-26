@@ -43,6 +43,7 @@ const elementos = {
   mode: document.getElementById("mode"),
   cuerpoDom: document.querySelector("body"),
   container: document.querySelector(".container"),
+  reloj: document.querySelector(".reloj"),
   center: document.querySelector(".center"),
   time: document.querySelector(".time"),
   date: document.querySelector(".date"),
@@ -140,6 +141,7 @@ function darkMode(){
     elementos.cuerpoDom.className = "active-dark";
     elementos.mode.className = "mode active-dark hand-dark";
     elementos.container.className = "container bg-dark";
+    elementos.reloj.className = "reloj border-dark";
     elementos.center.className = "center active-dark hand-dark";
     hourHand.element.className = "hour active-dark hand-dark";
     minuteHand.element.className = "minute active-dark hand-dark";
@@ -152,6 +154,7 @@ function darkMode(){
     elementos.cuerpoDom.className = "";
     elementos.mode.className = "mode";
     elementos.container.className = "container";
+    elementos.reloj.className = "reloj";
     elementos.center.className = "center";
     hourHand.element.className = "hour";
     minuteHand.element.className = "minute";

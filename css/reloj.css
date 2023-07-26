@@ -16,7 +16,6 @@ body{
     position: relative;
     gap: 40px;
     padding: 16px;
-    max-width: 800px;
     min-width: 340px;
     margin: auto;
     background: linear-gradient(to right, rgb(171, 248, 225), rgb(181, 181, 247));
@@ -30,36 +29,9 @@ body{
     cursor: pointer;
     border: none;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    transition: all 0.5s ease;
 }
 .mode:hover{
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-.bg-dark{
-    background: linear-gradient(to right, rgb(59, 80, 146),rgb(75, 187, 153));
-    transition: all 0.5s ease;
-}
-.active-dark{
-    background-color: #252525;
-    color: #fff;
-    transition: all 0.5s ease;
-}
-.active-dark.hand-dark{
-    background: #fff;
-    color: #1f1e1e;
-    transition: all 0.5s ease;
-}
-.active-dark.number{
-    background-color: #fff;
-    color: #1f1e1e;
-    transition: all 0.5s ease;
-}
-.active-dark.link{
-    color: #fff;
-    background-color: transparent;
-}
-.active-dark.link:hover{
-    color: #e2dfdf;
 }
 .reloj{
     position: relative;
@@ -68,7 +40,7 @@ body{
     justify-content: center;
     width: 320px;
     height: 320px;
-    border: 1px solid #1f1e1e;
+    border: 3px solid #1f1e1e;
     border-radius: 50%;
 }
 .center{
@@ -124,6 +96,7 @@ body{
 }
 .showInfo .time{
     font-size: 50px;
+    font-weight: 500;
 }
 .showInfo .date{
     font-size: 20px;
@@ -153,4 +126,30 @@ a{
 }
 a:hover{
     color: #414040;
+}
+.bg-dark{
+    background: linear-gradient(to right, rgb(10, 53, 82),rgb(13, 11, 29));
+    
+}
+.border-dark{
+    border: 3px solid white;
+}
+.active-dark{
+    background-color: #252525;
+    color: #fff;
+}
+.active-dark.hand-dark{
+    background: #fff;
+    color: #1f1e1e;
+}
+.active-dark.number{
+    background-color: #fff;
+    color: #1f1e1e;
+}
+.active-dark.link{
+    color: #fff;
+    background-color: transparent;
+}
+.active-dark.link:hover{
+    color: #e2dfdf;
 }
