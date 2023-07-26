@@ -133,7 +133,6 @@ function changeMode() {
 
 //agregamos un nuevo elemento al objeto elementos
 elementos.number = document.querySelectorAll(".number");
-console.log(elementos.number);
 
 changeMode();
 
