@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reloj</title>
+    <title>Reloj Digital Interactivo</title>
+    <meta name="description" content="Descubre mi último proyecto: un reloj digital interactivo creado con HTML, CSS y JavaScript. Muestra la hora actual con precisión y tiene un diseño elegante. ¡Espero que lo disfrutes!">
+    <meta name="keywords" content="reloj digital, HTML, CSS, JavaScript, reloj interactivo, web development">
+    <link rel="shortcut icon" href="/public/reloj.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reloj.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +16,18 @@
   <body>
     <div class="container">
       <button class="mode" id="mode">Dark mode</button>
-      <div class="reloj">
-        <div class="numbers">
-          
-        </div>
+      <article class="reloj">
+        <ul class="numbers">
+        </ul>
         <div class="center"></div>
         <div class="hour"></div>
         <div class="minute"></div>
         <div class="second"></div>
-      </div>
-      <div class="showInfo">
+      </article>
+      <section class="showInfo">
         <div class="time"></div>
         <div class="date"></div>
-      </div>
+      </section>
       <footer>
         <p>Coded by <a href="https://www.linkedin.com/in/katy-barboza-baena-406333203/" class="link" target="_blank">Katy Barboza</a>.</p>
       </footer>

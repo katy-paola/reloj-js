@@ -77,7 +77,7 @@ function initHands() {
   const centerY = 160; // Coordenada Y del centro del círculo
 
   for (let i = 1; i <= 12; i++) {
-    const number = document.createElement("div");
+    const number = document.createElement("li");
     number.textContent = i;
     number.classList.add("number");
     numbersContainer.appendChild(number);

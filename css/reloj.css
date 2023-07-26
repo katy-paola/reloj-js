@@ -6,6 +6,9 @@
 body{
     font-family: 'REM', sans-serif;
 }
+ul{
+    list-style: none;
+}
 .container{
     position: relative;
     min-height: 100vh;
@@ -93,6 +96,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: #1f1e1e;
 }
 .showInfo .time{
     font-size: 50px;
@@ -120,6 +124,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+footer{
+    color: #1f1e1e;
 }
 a{
     color: #1f1e1e;
