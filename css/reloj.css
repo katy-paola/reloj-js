@@ -54,6 +54,13 @@ body{
     color: #1f1e1e;
     transition: all 0.5s ease;
 }
+.active-dark.link{
+    color: #fff;
+    background-color: transparent;
+}
+.active-dark.link:hover{
+    color: #e2dfdf;
+}
 .reloj{
     position: relative;
     display: flex;

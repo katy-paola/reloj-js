@@ -46,6 +46,7 @@ const elementos = {
   center: document.querySelector(".center"),
   time: document.querySelector(".time"),
   date: document.querySelector(".date"),
+  link: document.querySelector(".link"),
 }
 
 
@@ -145,6 +146,7 @@ function darkMode(){
     elementos.number.forEach(element => {
       element.className = "number active-dark";
     });
+    elementos.link.className = "link active-dark";
     isClicked = true;
   }else{
     elementos.cuerpoDom.className = "";
@@ -156,6 +158,7 @@ function darkMode(){
     elementos.number.forEach(element => {
       element.className = "number";
     });
+    elementos.link.className = "link";
     isClicked = false;
   }
 }
