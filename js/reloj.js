@@ -59,7 +59,7 @@ function initHands() {
   rotation1 = 1/120;
 
   element2 = document.querySelector(".minute");
-  angle2 = currentTime.getMinutes() * 6;
+  angle2 = currentTime.getMinutes() * 6 + 0.1;
   rotation2 = 0.1;
 
   element3 = document.querySelector(".second");
