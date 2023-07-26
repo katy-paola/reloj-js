@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'REM', sans-serif;
+}
 .container{
     position: relative;
     min-height: 100vh;
@@ -11,7 +14,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 35vh;
+    gap: 40px;
+    padding: 16px;
+    max-width: 800px;
+    min-width: 340px;
+    margin: auto;
+    background: linear-gradient(to right, rgb(171, 248, 225), rgb(181, 181, 247));
 }
 .mode{
     background-color: #1f1e1e;
@@ -21,63 +29,81 @@
     font-size: 18px;
     cursor: pointer;
     border: none;
-    box-shadow: 0 3px 3px #000;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
 }
 .mode:hover{
-    background-color: #252525;
-    box-shadow: 0 1px 3px #000;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.bg-dark{
+    background: linear-gradient(to right, rgb(59, 80, 146),rgb(75, 187, 153));
+    transition: all 0.5s ease;
 }
 .active-dark{
     background-color: #252525;
     color: #fff;
+    transition: all 0.5s ease;
 }
 .active-dark.hand-dark{
     background: #fff;
-    color: #000;
+    color: #1f1e1e;
+    transition: all 0.5s ease;
+}
+.active-dark.number{
+    background-color: #fff;
+    color: #1f1e1e;
+    transition: all 0.5s ease;
 }
 .reloj{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    border: 1px solid #1f1e1e;
+    border-radius: 50%;
 }
 .center{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 150px;
+    left: 150px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 5px solid red;
-    background: #000;
+    border: 5px solid rgb(238, 21, 21);;
+    background: #1f1e1e;
     z-index: 1;
 }
 .hour{
     position: absolute;
-    top: 6.5px;
-    left: 10px;
-    width: 100px;
+    top: 156.5px;
+    left: 160px;
+    width: 80px;
     height: 7px;
-    background: #000;
+    background: #1f1e1e;
     transform: rotate(270deg);
     transform-origin: 0 3.5px;
     transition: all 0.1s ease-in-out;
 }
 .minute{
     position: absolute;
-    top: 6.5px;
-    left: 10px;
-    width: 150px;
+    top: 156.5px;
+    left: 160px;
+    width: 100px;
     height: 7px;
-    background: #000;
+    background: #1f1e1e;
     transform: rotate(270deg);
     transform-origin: 0 3.5px;
     transition: all 0.1s ease-in-out;
 }
 .second{
     position: absolute;
-    top: 6.5px;
-    left: 10px;
-    width: 150px;
+    top: 156.5px;
+    left: 160px;
+    width: 100px;
     height: 7px;
-    background: #f00;
+    background: rgb(238, 21, 21);
     transform: rotate(270deg);
     transform-origin: 0 3.5px;
     transition: all 0.1s ease-in-out;
@@ -94,4 +120,30 @@
 }
 .showInfo .date{
     font-size: 20px;
+}
+.numbers {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.number {
+    position: absolute;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: #1f1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    color: #1f1e1e;
+}
+a:hover{
+    color: #414040;
 }
