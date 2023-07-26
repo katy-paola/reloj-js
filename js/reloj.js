@@ -140,6 +140,7 @@ function darkMode(){
   if(!isClicked){
     elementos.cuerpoDom.className = "active-dark";
     elementos.mode.className = "mode active-dark hand-dark";
+    elementos.mode.textContent = "Light Mode";
     elementos.container.className = "container bg-dark";
     elementos.reloj.className = "reloj border-dark";
     elementos.center.className = "center active-dark hand-dark";
@@ -156,6 +157,7 @@ function darkMode(){
   }else{
     elementos.cuerpoDom.className = "";
     elementos.mode.className = "mode";
+    elementos.mode.textContent = "Dark Mode";
     elementos.container.className = "container";
     elementos.reloj.className = "reloj";
     elementos.center.className = "center";
