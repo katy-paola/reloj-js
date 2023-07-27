@@ -56,11 +56,11 @@ const elementos = {
 
 function initHands() {
   element1 = document.querySelector(".hour");
-  angle1 = currentTime.getHours() * 30;
+  angle1 = currentTime.getHours() * 30 + currentTime.getMinutes() * 0.5; 
   rotation1 = 1/120;
 
   element2 = document.querySelector(".minute");
-  angle2 = currentTime.getMinutes() * 6;
+  angle2 = currentTime.getMinutes() * 6 + 0.01;
   rotation2 = 0.1;
 
   element3 = document.querySelector(".second");
